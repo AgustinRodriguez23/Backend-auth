@@ -1,0 +1,11 @@
+import passport from 'passport';
+import localStrategy from '../strategies/local.strategy.js';
+import githubStrategy from '../strategies/github.strategy.js';
+import jwtStrategy from '../strategies/jwt.strategy.js';
+
+
+passport.use('local', localStrategy);
+passport.use('github', githubStrategy);
+passport.use('jwt', jwtStrategy);
+
+export default passport;
