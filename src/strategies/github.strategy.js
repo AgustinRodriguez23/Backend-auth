@@ -1,7 +1,6 @@
 import { Strategy as GitHubStrategy } from 'passport-github2';
 import User from '../models/User.js';
 
-
 const githubStrategy = new GitHubStrategy(
   {
     clientID: process.env.GITHUB_CLIENT_ID,
@@ -31,7 +30,7 @@ const githubStrategy = new GitHubStrategy(
         provider: 'github',
         githubId: profile.id,
       });
-
+      
       return done(null, newUser);
     } catch (error) {
       return done(error);

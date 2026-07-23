@@ -1,7 +1,6 @@
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
 
-
 const sessionConfig = session({
   name: 'sessionId', 
   secret: process.env.SESSION_SECRET,
